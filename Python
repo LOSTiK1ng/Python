@@ -1,0 +1,31 @@
+def main():
+    nome = ""
+    preco = 0
+    quantidade = 0
+    opcao = 0
+    while True:
+        print("\n - Menu Vendas - \n")
+        print("\n1. Cadastrar Produto\n")
+        print("\n2. Ver Produto Cadastrado\n")
+        print("\n3. Sair\n")
+        opcao =int(input("Escolha uma opção:"))
+        if opcao == 1:
+            nome = input("\n Digite o nome do produto:\n")
+            preco = int(input("\n Coloque o preço do produto:\n"))
+            quantidade = int(input("\n Qual a Quantidade do Pruduto Cadastrado:\n"))
+            print("\n produto cadastrado!\n")
+        elif opcao == 2:
+             if nome == "" or preco == 0 or quantidade == 0:
+                 print("\nProduto Inexistente\n")
+             else:
+                 print("\n PRODUTOS CADASTRADOS \n")
+                 print(f"Produto: {nome}")
+                 print(f"Do Preço: {preco}")
+                 print(f"Quantidade: {quantidade}")
+        elif opcao == 3:
+            print("Saindo do sistema")
+            break
+        else:
+            print("Opção invalida!, Escolha uma opção dentro do Menu de 1 a 3!")
+if __name__ == "__main__":
+    main() 
