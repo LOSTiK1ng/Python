@@ -1,1 +1,47 @@
-
+def main ():
+    nome = ""
+    email = ""
+    idade = 0
+    cidade = ""
+    profissao = ""
+    opcao = 0
+    while True:
+        print("\n - Menu Castros - \n")
+        print("\n1. Cadastrar \n")
+        print("\n2. Ver Usuário Cadastrado\n")
+        print("\n3. Sair\n")
+        opcao =int(input("Escolha uma opção:"))
+        if opcao == 1:
+            nome = input("\n Digite o nome do Usuário:\n")
+            cidade = input("\n Digite a cidade do Usuário:\n")
+            idade = int(input("\n Digite a idade do Usuário:\n"))
+            email = input("\n Digite o E-mail do Usuário:")
+            profissao = input("\n Digite a Profissão do Usuário:")
+            print("\n Usuário cadastrado!\n")
+        elif opcao == 2:
+             if nome or not cidade or not idade or not profissao or not email:
+                 print("\n Dados para Cadastro incompleto, preencha todos os campos!\n")
+             elif "@" not in email or "." not in email or email =="":
+                     print("E-mail invalido!")
+             elif nome == "":
+                     print("Coloque o nome de Usuário antes de prosseguir")
+             elif cidade == "":
+                     print("Coloque a Cidade de Usuário antes de prosseguir")
+             elif idade == 0:
+                     print("Coloque uma idade valida para o usuário")
+             elif profissao == "":
+                     print("Digite uma profissão valida")
+             else: 
+                   print("\n - Dados do usuário - \n")
+                   print(f"\n Usuário do nome: {nome}")
+                   print(f"\n Usuário mora na Cidade: {cidade}")
+                   print(f"Idade do Usuário: {idade}")
+                   print(f"Profissão do usuário: {profissao}")
+                   print(f"E-mail do Usuário: {email}")
+        elif opcao == 3:
+            print("Saindo do sistema")
+            break
+        else:
+            print("Opção invalida!, Escolha uma opção dentro do Menu de 1 a 3!")
+if __name__ == "__main__":
+    main() 
