@@ -1,0 +1,32 @@
+def main():
+    nome = ""
+    preco = ""
+    quantidade = 0
+    opcao = 0
+    while True: #Todo o codigo gera em torno do While True para o codigo entrar em loop
+        print("\n - Menu Vendas - \n")
+        print("\n1. Cadastrar Produto\n")
+        print("\n2. Ver Produto Cadastrado\n")
+        print("\n3. Sair\n")
+        opcao =int(input("Escolha uma opção:"))# int de inteiro, mostrando que a pergunta vai ser respondida por numero
+        # input e pra fazer uma frase ser respondida sem precisar do (print)
+        if opcao == 1: # Para a primeira variavel da linha
+            nome = input("\n Digite o nome do produto:\n")
+            preco = input("\n Coloque o preço do produto:\n")
+            quantidade = int(input("\n Qual a Quantidade do Pruduto Cadastrado:\n"))
+            print("\n produto cadastrado!\n")
+        elif opcao == 2:# Elfi para uma variavel que não seja a primeira e nem a ultima
+             if nome == "" or preco == "" or quantidade == 0:# : Use como uma chave sem precisar fechar
+                 print("\nProduto Inexistente\n")
+             else:  
+                 print("\n PRODUTOS CADASTRADOS \n")
+                 print(f"Produto: {nome}") # f para armazenar temporariamente uma função, um banco de dados
+                 print(f"Do Preço: {preco}")
+                 print(f"Quantidade: {quantidade}")
+        elif opcao == 3:
+            print("Saindo do sistema")
+            break # função pra fazer o codigo acabar o loop, ou seja, encerrar o programa
+        else:# Para abrir uma ultima variavel da linha
+            print("Opção invalida!, Escolha uma opção dentro do Menu de 1 a 3!")
+if __name__ == "__main__":
+    main() # necessario para um codigo que contem uma ou mais funçoes,o main e name chama o codigo para iniciar, se o codigo contem uma função
