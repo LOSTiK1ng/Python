@@ -1,0 +1,79 @@
+def varificar_idade():
+    try:
+        idade = int(input(" Qual sua idade?"))
+    except ValueError:
+        print("Idade inválida. Use apenas números.")
+        return False
+    if idade < 18:
+        print("Desculpe,você precisa ter no minimo 18 para prosseguir")
+        return False
+    return False
+def main ():
+    if not varificar_idade():
+        return # Usado para guardar um resultado e trazer de volta quando o usuario mandar, diferente do print, voce pode modificar lo
+    nome = ""
+    email = ""
+    idade = 0
+    cidade = ""
+    profissao = ""
+    opcao = 0
+    while True:
+     idade = int(input(" Qual sua idade?"))
+    except ValueError:
+        print("Idade inválida. Use apenas números.")
+    return False
+    if idade < 18:
+        print("Desculpe,você precisa ter no minimo 18 para prosseguir")
+        return False
+    if opcao == 1:
+        print("\n - Menu Castros - \n")
+        print("\n1. Cadastrar \n")
+        print("\n2. Ver Usuário Cadastrado\n")
+        print("\n3. Sair\n")
+        opcao =int(input("Escolha uma opção:"))
+        if opcao == 1:
+            nome = input("\n Digite o nome do Usuário:\n")
+            cidade = input("\n Digite a cidade do Usuário:\n")
+            idade = int(input("\n Digite a idade do Usuário:\n"))
+            if idade < 18:
+                print(" Você precisa ter no minimo 18 para prosseguir")
+                continue
+            email = input("\n Digite o E-mail do Usuário:")
+            profissao = input("\n Digite a Profissão do Usuário:")
+            print("\n Usuário cadastrado!\n")
+        elif opcao == 2:
+             if nome or not cidade or not idade or not profissao or not email:
+                 print("\n Dados para Cadastro incompleto, preencha todos os campos!\n")
+             elif "@" not in email or "." not in email or email =="" not in email:
+                     print("E-mail invalido!")
+                     return None
+             return {
+                 "nome": nome,
+                 "idade": idade,
+                 "cidade": cidade,
+                 "profissao": profissao,
+                 "email": email
+             }
+        def mostrar_usuario(usuario):
+             """Mostrar as informaçoes de um usuário"""
+             if usuario:
+                 print("\n -- Dados do Usuário -- \n")
+                 print(f"Nome: {usuario['nome']}")
+                 print(f"Cidade: {usuario['cidade']}")
+                 print(f"Idade: {usuario['idade']}")
+                 print(f"Profissão: {usuario['profissao']}")
+                 print(f"E-mail: {usuario['email']}")
+             else: 
+                   print("\n - Dados do usuário - \n")
+                   print(f"\n Usuário do nome: {nome}")
+                   print(f"\n Usuário mora na Cidade: {cidade}")
+                   print(f"Idade do Usuário: {idade}")
+                   print(f"Profissão do usuário: {profissao}")
+                   print(f"E-mail do Usuário: {email}")
+        if opcao == 3:
+            print("Saindo do sistema")
+            break
+        else:
+            print("Opção invalida!, Escolha uma opção dentro do Menu de 1 a 3!")
+if __name__ == "__main__":
+    main()
